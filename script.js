@@ -3,10 +3,10 @@ let bmwspeed =0
 let bg=document.getElementById("bg")
 let bgspeed=0
 document.body.onkeydown=function(event){
-  if(speed<500 && event.keyCode==32 ){
+  if(speed<(window.innerWidth-259) && event.keyCode==32 ){
        speed=speed +5           
   }
-  if(speed<500 && event.keyCode==38){
+  if(bmwspeed<(window.innerWidth-259)  && event.keyCode==38){
 bmwspeed=bmwspeed+3         
 }
   console.log(event.keyCode)  
@@ -22,7 +22,3 @@ setInterval(function(){
 let bmw =document.getElementById("bmw") 
 bmw.style.left=bmwspeed+"px" 
 },100)  
-setInterval(function(){
-bgspeed=bgspeed+1
-
-  },100) 
