@@ -4,10 +4,10 @@ let bg=document.getElementById("bg")
 let bgspeed=0
 document.body.onkeydown=function(event){
   if(speed<(window.innerWidth-259) && event.keyCode==32 ){
-       speed=speed +5           
+       speed=speed +20           
   }
   if(bmwspeed<(window.innerWidth-259)  && event.keyCode==38){
-bmwspeed=bmwspeed+3         
+bmwspeed=bmwspeed +18        
 }
   console.log(event.keyCode)  
 //   let car =document.getElementById("car") 
@@ -16,7 +16,11 @@ bmwspeed=bmwspeed+3
 //   let bmw =document.getElementById("bmw") 
 //   bmw.style.left=speed+"px" 
 }
-setInterval(function(){
+setInterval(function(){ 
+if(speed>30){
+  speed=speed-10
+  
+}
   let car =document.getElementById("car") 
   car.style.left=speed+"px"            
 let bmw =document.getElementById("bmw") 

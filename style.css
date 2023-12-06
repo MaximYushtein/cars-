@@ -1,5 +1,6 @@
 body {
     text-align: center;
+    overflow: hidden;
   }
   #bg1,#bg2{
     width: 100%;
@@ -8,29 +9,31 @@ body {
     left: 0;
     top: 0px ;
     z-index: -1;
+    transform:  scale(1.01);
  }
   #bg1{
-    animation:2s infinite bg1 ;  
+    animation:4s infinite bg1 ;  
     animation-timing-function: linear;
   }
   #bg2{
     animation:4s infinite bg2 ;  
     animation-timing-function: linear;
+    animation-delay: 2s;
   }
   @keyframes bg1{
     0%{
-        transform: translateX(0%);
+        transform: translateX(100%) scale(1.01);
     }
     100%{
-         transform: translateX(-100%);
+         transform: translateX(-100%) scale(1.01);
     }
   }
   @keyframes bg2{
     0%{
-        transform: translateX(100%);
+        transform: translateX(100%) scale(1.01);
     }
     100%{
-         transform: translateX(-100%);
+         transform: translateX(-100%) scale(1.01);
     }
   }
   h1{
@@ -64,7 +67,7 @@ body {
     position: absolute;
     bottom: 200px;
     left: 30px;
-    
+    transition: 0.3s;
   }
   #bmw{
 transform: scaleX(-1);
