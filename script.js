@@ -45,7 +45,7 @@ setTimeout(function () {
     meters = meters + 1
 
     title.innerHTML = "meters: " + meters
-    if (meters == 150) {
+    if (meters == 1500) {
       
       clearInterval(stopmeters)
       if(speed>bmwspeed){
@@ -57,4 +57,3 @@ setTimeout(function () {
     }
   }, 100)
 }, 2000)
-// Сделать тег h2 
